@@ -137,20 +137,4 @@ samples/vision/ultralytics_yolo/model/source/yolo11m.onnx
 
 `export_monkey_patch.py` 是D-Robotics官方脚本。它调用Ultralytics导出，并把YOLO11检测头改为适合BPU部署的6输出结构。
 
-本项目提供的参考文件为 `model/yolo11m.onnx`：
-
-| 项目 | 数据 |
-|---|---|
-| 文件大小 | 80,450,131 bytes |
-| Opset | 19 |
-| 输入/输出类型 | FLOAT32 |
-| 输出数量 | 6 |
-| SHA-256 | `51c15134789c8fe10a53e2368de61abf056d9d900527264664d0c05a1f6a3c77` |
-
-可以验证生成文件：
-
-```bash
-sha256sum samples/vision/ultralytics_yolo/model/source/yolo11m.onnx
-```
-
-下一步按照 [ONNX转HBM与Benchmark指南](onnx_to_hbm.md) 使用OpenExplorer生成S600 HBM。
+> git仓库中yolo11m_s600_benchmark_release/model/下提供已转好的yolov11m.onnx
